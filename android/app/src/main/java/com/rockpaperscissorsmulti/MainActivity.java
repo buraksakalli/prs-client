@@ -1,4 +1,4 @@
-package com.rockpaperscissors;
+package com.rockpaperscissorsmulti;
 
 import com.facebook.react.ReactActivity;
 

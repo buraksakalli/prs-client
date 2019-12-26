@@ -1,4 +1,4 @@
-package com.rockpaperscissors;
+package com.rockpaperscissorsmulti;
 
 import android.app.Application;
 import android.content.Context;
