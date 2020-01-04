@@ -27,7 +27,7 @@ export default class App extends Component {
       winner: null,
       isJoinedQueue: false,
     };
-    this.socket = SocketIOClient('http://192.168.2.113:3000');
+    this.socket = SocketIOClient('https://rockpaper.buraksakalli.org');
     this.socket.on('id', id => {
       this.setState({
         userId: id,

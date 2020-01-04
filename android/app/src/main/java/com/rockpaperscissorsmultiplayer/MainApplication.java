@@ -1,4 +1,4 @@
-package com.rockpaperscissorsmulti;
+package com.rockpaperscissorsmultiplayer;
 
 import android.app.Application;
 import android.content.Context;
