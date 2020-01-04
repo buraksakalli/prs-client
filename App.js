@@ -26,9 +26,8 @@ export default class App extends Component {
       roomId: null,
       winner: null,
       isJoinedQueue: false,
-      color: null,
     };
-    this.socket = SocketIOClient('https://rockpaper.buraksakalli.org');
+    this.socket = SocketIOClient('http://192.168.2.113:3000');
     this.socket.on('id', id => {
       this.setState({
         userId: id,
@@ -42,6 +41,30 @@ export default class App extends Component {
     this.socket.on('game-starting', room => {
       this.setState({
         roomId: room,
+      });
+    });
+    this.socket.on('you-are-disconnected', () => {
+      alert('you-are-disconnected');
+      this.setState({
+        score: 0,
+        rivalScore: 0,
+        rivalSelection: null,
+        selection: null,
+        roomId: null,
+        winner: null,
+        isJoinedQueue: false,
+      });
+    });
+    this.socket.on('rival-disconnected', () => {
+      alert('rival-disconnected');
+      this.setState({
+        score: 0,
+        rivalScore: 0,
+        rivalSelection: null,
+        selection: null,
+        roomId: null,
+        winner: null,
+        isJoinedQueue: false,
       });
     });
   }
